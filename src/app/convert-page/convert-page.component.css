@@ -1,0 +1,72 @@
+/**{*/
+/*  box-sizing: border-box*/
+/*}*/
+.convert-page-container {
+  width: 100vw;
+  /*height: 100vw;*/
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.7)),
+  url("../../assets/img/treasure-gold.jpg")no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  text-align: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+}
+.header{
+  color: lavender;
+  font-size: 3.5rem;
+  margin-top: 100px;
+  text-shadow: aqua;
+}
+.input{
+  /*margin-left: 100px  ;*/
+}
+/*select{*/
+/*  display: inline-block;*/
+/*  cursor: pointer;*/
+/*  !*box-sizing: border-box;*!*/
+/*}*/
+.have{
+  position: relative;
+  color: white;
+  right: 220px;
+  top:35px;
+  cursor: pointer;
+}
+.need{
+  position: relative;
+ left: 133px;
+  bottom: 11px;
+  color: white;
+  cursor: pointer;
+}
+input{
+  margin-left: 100px;
+  border-radius: 5px ;
+  height: 20px;
+  cursor: pointer;
+  width: 250px;
+  position: relative;
+  right: 35px ;
+}
+.left-select{
+  position: relative;
+  right: 162px;
+  top: 45px;
+  width: 250px;
+  height: 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+.right-select{
+  position: relative;
+  left: 192px;
+  bottom: 2px;
+  width: 250px;
+  height: 22px;
+  border-radius:5px;
+  cursor: pointer;
+}
