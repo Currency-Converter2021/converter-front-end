@@ -11,9 +11,6 @@
   background-size: cover;
   overflow: hidden;
   text-align: center;
-  /*display: flex;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
 }
 .header{
   color: lavender;
@@ -70,3 +67,4 @@ input{
   border-radius:5px;
   cursor: pointer;
 }
+

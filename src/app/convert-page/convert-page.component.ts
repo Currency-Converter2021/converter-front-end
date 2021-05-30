@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
+// import { Data } from './convert-page.data-component';
 
 @Component({
   selector: 'app-convert-page',
@@ -7,13 +8,38 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./convert-page.component.css']
 })
 
-export class ConvertPageComponent {
-  // projectForm: FormGroup;
+export class ConvertPageComponent  {
+  selectCurrency = '';
 
-
-//   ngOnInit(){
-// this.projectForm = new FormGroup({
-// 'projectStatus':new FormControl()
-// });
-// }
+  selectChangeHandler(event: any){
+     this.selectCurrency = event.target.value;
+  }
 }
+// ------------------------------------------------------------
+// export class ConvertPageComponent implements OnInit {
+//   dates :Data[];
+//
+//   ngInit()
+//   {
+//     this.dates = [
+//       {Id:1,Currency:'BGN - Bulgarian Lev'},
+//       {Id:2,Currency:'EUR - Euro'},
+//       {Id:3,Currency:'GBP - British Pound'},
+//     ];
+//   }
+//
+//
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
