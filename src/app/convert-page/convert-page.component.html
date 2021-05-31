@@ -1,37 +1,65 @@
-<div class="convert-page-container">
-<h1 class="header">CURRENCY CONVERTER</h1>
-  <div class="form-container">
-    <br>
-  <form>
-    <div class="line">
-    <label class="have" for="#">Currency I Have</label>
-    <br>
-  <select class="left-select" (change)="selectChangeHandler($event)">
-    <option value="select">Select currency</option>
-    <option value="bgn">BGN</option>
-    <option value="usd">USD</option>
-    <option value="eur">EUR</option>
-  </select>
+<!--<div class="convert-page-container">-->
+<!--<h1 class="header">CURRENCY CONVERTER</h1>-->
+<!--  <div class="form-container">-->
+<!--    <br>-->
+<!--  <form>-->
+<!--    <div class="line">-->
+<!--    <label class="have" for="#">Currency I Have</label>-->
+<!--    <br>-->
+<!--  <select class="left-select" (change)="selectChangeHandler($event)">-->
+<!--    <option value="select">Select currency</option>-->
+<!--    <option value="bgn">BGN</option>-->
+<!--    <option value="usd">USD</option>-->
+<!--    <option value="eur">EUR</option>-->
+<!--  </select>-->
+<!--&lt;!&ndash;      <p style="color: white">TEST TEST TEST {{selectCurrency}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <select class="left-select">&ndash;&gt;-->
+<!--&lt;!&ndash;          <option *ngFor="let data of dates" [value]="data.id">{{data.Currency}}</option>&ndash;&gt;-->
+<!--&lt;!&ndash;        </select>&ndash;&gt;-->
+<!--    <br>-->
+<!--      <div class="line">-->
+<!--    <label class="need" for="#">Currency I Need</label>-->
+<!--    <br>-->
+<!--    <select class="right-select" name="select-id">-->
+<!--      <option value="select">>Select currency</option>-->
+<!--      <option value="eur">EUR</option>-->
+<!--      <option value="bgn">BGN</option>-->
+<!--      <option value="usd">USD</option>-->
+<!--    </select>-->
+<!--      </div>-->
+<!--    <br>-->
+<!--    <input placeholder="   Amount" class="input input-have" type="number">-->
+<!--    <input placeholder="  Sum" class="input result-need" type="number">-->
 <!--      <p style="color: white">TEST TEST TEST {{selectCurrency}}</p>-->
-<!--        <select class="left-select">-->
-<!--          <option *ngFor="let data of dates" [value]="data.id">{{data.Currency}}</option>-->
-<!--        </select>-->
-    <br>
-      <div class="line">
-    <label class="need" for="#">Currency I Need</label>
-    <br>
-    <select class="right-select" name="select-id">
-      <option value="select">>Select currency</option>
-      <option value="eur">EUR</option>
-      <option value="bgn">BGN</option>
-      <option value="usd">USD</option>
-    </select>
-      </div>
-    <br>
-    <input placeholder="   Amount" class="input input-have" type="number">
-    <input placeholder="  Sum" class="input result-need" type="number">
-      <p style="color: white">TEST TEST TEST {{selectCurrency}}</p>
-  </div>
-  </form>
-</div>
+<!--  </div>-->
+<!--  </form>-->
+<!--</div>-->
 
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+  <div class="convert-page-container">
+    <h1 class="header">CURRENCY CONVERTER</h1>
+    <div class="form-container">
+      <br>
+      <form>
+        <div class="line">
+          <label class="have" >Currency I Have</label>
+          <br>
+          <select class="left-select" >
+            <option *ngFor="let data of myDataBases" >{{data.currency}} - {{data.description}}</option>
+          </select>
+          <br>
+          <div class="line">
+            <label class="need" >Currency I Need</label>
+            <br>
+            <select class="right-select" name="select-id">
+              <option *ngFor="let data of myDataBases" >{{data.currency}} - {{data.description}}</option>
+            </select>
+          </div>
+          <br>
+          <input placeholder="    Amount" class="input input-have" type="text" >
+          <input placeholder="  Sum" class="input result-need" type="number">
+          <br>
+          <p style="color: white" >TEST TEST TEST </p>
+        </div>
+      </form>
+    </div>
