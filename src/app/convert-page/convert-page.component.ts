@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+
 import {FormControl, FormGroup} from "@angular/forms";
+import {Event} from "@angular/router";
 // import { Data } from './convert-page.data-component';
 
 @Component({
@@ -10,7 +12,14 @@ import {FormControl, FormGroup} from "@angular/forms";
 
 
 export class ConvertPageComponent {
-  selectCurrency = '';
+  currencyQuantity = 1;
+   endQuantity = 1;
+   //     {
+   //   currency:'',
+   //   description:'',
+   //   value:''
+   // };
+
 
   myDataBases = [
     {"currency": "", "description": "Select currency", "value": ""},
@@ -19,51 +28,17 @@ export class ConvertPageComponent {
     {"currency": "GBP", "description": "British Pound", "value": 2.34},
   ]
 
+  convert($event: any) {
+    // console.log($event.target.value);
+   this.currencyQuantity = $event.target.value;
+  }
 
-  constructor() {
-
+  setValue($event: any) {
+    // console.log($event.target.value);
+    this.endQuantity = $event.target.value;
   }
 }
-// ------------------------------------------------------------------------
 
-// ------------------------------------------------------------
-// export class ConvertPageComponent implements OnInit {
-//   dates :Data[];
-//
-//   ngInit()
-//   {
-//     this.dates = [
-//       {Id:1,Currency:'BGN - Bulgarian Lev'},
-//       {Id:2,Currency:'EUR - Euro'},
-//       {Id:3,Currency:'GBP - British Pound'},
-//     ];
-//   }
-//
-//
-// }
-
-// public jsonData = {
-//   'id': 1,
-//   'currency': 'BGN',
-//   'dddd': 'dddd'
-// }
-
-// public arrData = [
-//   {'id':1,'currency':'BGN - Bulgarian Lev'},
-//   {'id':2,'currency':'EUR - Euro'},
-//   {'id':3,'currency':'GBP - British Pound'},
-// ]
-//     selectChangeHandler(event: any){
-//    this.selectCurrency = event.target.value;
-// }
-
-
-
-//   public data =
-//        {Id:1,Currency:'BGN - Bulgarian Lev'},
-//        {Id:2,Currency:'EUR - Euro'},
-//       {Id:3,Currency:'GBP - British Pound'},
-// }
 
 
 

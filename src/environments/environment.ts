@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API_KEY: 'https://v2.api.forex/rates/latest.json?beautify=true&key=c5c218f1-fc92-489b-b364-4abfc9d47d79'
 };
 
 /*
