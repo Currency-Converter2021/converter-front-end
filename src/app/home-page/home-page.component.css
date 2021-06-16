@@ -1,11 +1,12 @@
 div {
   width: 100vw;
-  /*height: 100vw;*/
   height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.7)),
   /*background: linear-gradient(rgba(0, 0, 0, 0.7),*/
   /*rgba(0, 0, 0, 0.7)),*/
-  /*url("../../assets/img/dollars2.jpg")no-repeat center;*/
-  background: url("../../assets/img/dollars2.jpg") no-repeat center center fixed ;
+  url("../../assets/img/dollars2.jpg")no-repeat center;
+  /*background: url("../../assets/img/dollars2.jpg") no-repeat center center fixed ;*/
   background-size: cover;
   overflow: hidden;
   display: flex;
@@ -13,11 +14,7 @@ div {
   align-items: center;
   text-decoration: none;
   color: white;
-  /*background: rgba(001, 001, 001, .7);*/
 }
-/*.home-container {*/
-
-/*}*/
 .begin{
   font-size: 1.5rem ;
   width: 55%;
@@ -26,7 +23,6 @@ div {
   background-color: brown;
   color: white;
   text-decoration: none;
-
 }
 .begin:hover{
   color: black;

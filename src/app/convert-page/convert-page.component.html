@@ -3,7 +3,7 @@
     <div class="form-container">
         <h1 class="header">CURRENCY CONVERTER</h1>
         <form>
-<!--            <h1 class="header">CURRENCY CONVERTER</h1>-->
+            <!--            <h1 class="header">CURRENCY CONVERTER</h1>-->
 
             <div class="line third">
                 <label class="currency-quantity">Amount To Change</label>
@@ -25,10 +25,22 @@
                     <!--                                      [value]="onFillData($event)"-->
                 </select>
             </div>
-    </form>
-                    <div class="line zero">
-                        <p id="result">Your Currency Result is:</p>
-                        <p class="result">{{resultMaker()}}{{result | number:'1.5':''}}{{endCurrency !== "Select Currency" ? endCurrency : ""}}</p>
-                    </div>
-</div>
+        </form>
+        <div class="line zero">
+            <p id="result">Your Currency Result is:</p>
+             <div *ngIf="rate!==0; then thenBlock; else elseBlock"></div>
+
+            <ng-template #thenBlock>
+                <p class="result">{{resultMaker()}}{{result | number:'1.5':''}}{{endCurrency !== "Select Currency" ? endCurrency : ""}}</p>
+            </ng-template>
+
+            <ng-template #elseBlock>
+                <p class="result"></p>
+            </ng-template>
+
+
+
+<!--            <p class="result">{{resultMaker()}}{{result | number:'1.5':''}}{{endCurrency !== "Select Currency" ? endCurrency : ""}}</p>-->
+        </div>
+    </div>
 </div>

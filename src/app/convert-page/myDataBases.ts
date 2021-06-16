@@ -1,9 +1,3 @@
-// const myDataBases = [
-//     {"currency": "", "description": "Select currency", "value": ""},
-//     {"currency": "BGN", "description": "Bulgarian Lev", "value": 1.95583},
-//     {"currency": "EUR", "description": "Euro", "value": 1.00},
-//     {"currency": "GBP", "description": "British Pound", "value": 2.34},
-// ]
 
 // const myDataBases = [
 //     {"currency": "EUR"},

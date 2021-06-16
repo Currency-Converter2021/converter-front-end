@@ -23,7 +23,7 @@ constructor(private http: HttpClient) {
 }
 
   resultMaker(){
-    this.result = this.rate * this.currencyQuantity;
+      this.result = this.rate * this.currencyQuantity;
     console.log(this.result)
   }
 
