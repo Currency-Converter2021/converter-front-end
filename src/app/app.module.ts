@@ -7,6 +7,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ConvertPageComponent } from './convert-page/convert-page.component';
 import {RouterModule, Routes} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const аppRoutes: Routes = [
   {path:'', redirectTo: '/home', pathMatch: 'full'},
@@ -25,7 +27,8 @@ const аppRoutes: Routes = [
         // AppRoutingModule
         ReactiveFormsModule,
         RouterModule.forRoot(аppRoutes),
-        FormsModule
+        FormsModule,
+        HttpClientModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

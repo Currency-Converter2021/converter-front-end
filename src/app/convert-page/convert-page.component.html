@@ -1,31 +1,34 @@
 <div class="convert-page-container">
-    <h1 class="header">CURRENCY CONVERTER</h1>
+
     <div class="form-container">
-        <br>
+        <h1 class="header">CURRENCY CONVERTER</h1>
         <form>
-            <div class="line">
+<!--            <h1 class="header">CURRENCY CONVERTER</h1>-->
+
+            <div class="line third">
+                <label class="currency-quantity">Amount To Change</label>
+                <input (keyup)="convert($event)" placeholder="...CHANGE..." class="input input-have" type="text">
+                <!--                <input placeholder="Sum" class="input result-need" type="number">-->
+            </div>
+            <div class="line first">
                 <label class="have">Currency I Have</label>
-                <br>
-                <select class="left-select">
+                <select (change)="setValueStart($event)" class="left-select">
                     <option *ngFor="let data of myDataBases">
-                        {{data.currency}} - {{data.description}}
+                        {{data.currency}}
                     </option>
                 </select>
-                <br>
-                <div class="line">
-                    <label class="need">Currency I Need</label>
-                    <br>
-                    <select (change)="setValue($event)" class="right-select" name="select-id">
-                        <option [value]="data.value" *ngFor="let data of myDataBases">{{data.currency}} - {{data.description}}</option>
-                        <!--              [value]="onFillData($event)"-->
-                    </select>
-                </div>
-                <br>
-                <input (keyup)="convert($event)" placeholder="    Amount" class="input input-have" type="text">
-                <input placeholder="  Sum" class="input result-need" type="number">
-                <br>
-                <p style="color: white">TEST TEST TEST{{endQuantity}}_{{currencyQuantity}}</p>
             </div>
-        </form>
-    </div>
-    <!--    <option *ngFor="let data of myDataBases" >{{data.currency}} - {{data.description}}</option>-->
+            <div class="line second">
+                <label class="need">Currency I Need</label>
+                <select (change)="setValueEnd($event)" class="right-select" name="select-id">
+                    <option [value]="data.currency" *ngFor="let data of myDataBases">{{data.currency}}</option>
+                    <!--                                      [value]="onFillData($event)"-->
+                </select>
+            </div>
+    </form>
+                    <div class="line zero">
+                        <p id="result">Your Currency Result is:</p>
+                        <p class="result">{{resultMaker()}}{{result | number:'1.5':''}}{{endCurrency !== "Select Currency" ? endCurrency : ""}}</p>
+                    </div>
+</div>
+</div>
