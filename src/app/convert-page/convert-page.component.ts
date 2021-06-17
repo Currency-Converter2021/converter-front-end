@@ -11,10 +11,10 @@ import {map} from 'rxjs/operators';
 })
 
 export class ConvertPageComponent implements OnInit {
-    currencyQuantity: number = 0;
+    currencyQuantity: number = 1;
     startCurrency: string = 'Select Currency';
     endCurrency: string = 'Select Currency';
-    rate: number = 0
+    rate: number = 1
     result: number = 0;
 
     constructor(private http: HttpClient) {
@@ -36,6 +36,7 @@ export class ConvertPageComponent implements OnInit {
             (`http://localhost:8000/currency-exchange-rate/?from=${this.startCurrency}&to=${this.endCurrency}`)
                 .subscribe(data => {
                     this.rate = data.exchangeRate;
+                    this.checkResult();
                     console.log(this.rate);
                 })
         }
@@ -209,7 +210,7 @@ export class ConvertPageComponent implements OnInit {
         // console.log($event.target.value);
         this.currencyQuantity = $event.target.value;
 
-      this.checkResult()
+        this.checkResult()
     }
 
     setValueEnd($event: any) {
@@ -230,17 +231,4 @@ export class ConvertPageComponent implements OnInit {
         this.currencyQuantity = $event.target.value;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

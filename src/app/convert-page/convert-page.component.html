@@ -24,7 +24,7 @@
         </form>
         <div class="line zero">
             <p id="result">Your Currency Result is:</p>
-             <div *ngIf="startCurrency!=='Select Currency'||endCurrency!=='Select Currency'; then thenBlock; else elseBlock"></div>
+            <div *ngIf="startCurrency!=='Select Currency'||endCurrency!=='Select Currency'; then thenBlock; else elseBlock"></div>
 
             <ng-template #thenBlock>
                 <p class="result">{{result | number:'1.5'}}   {{endCurrency !== "Select Currency" ? endCurrency : ""}}</p>
