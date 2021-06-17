@@ -27,7 +27,7 @@
              <div *ngIf="startCurrency!=='Select Currency'||endCurrency!=='Select Currency'; then thenBlock; else elseBlock"></div>
 
             <ng-template #thenBlock>
-                <p class="result">{{resultMaker()}}{{result | number:'1.5'}}   {{endCurrency !== "Select Currency" ? endCurrency : ""}}</p>
+                <p class="result">{{result | number:'1.5'}}   {{endCurrency !== "Select Currency" ? endCurrency : ""}}</p>
             </ng-template>
             <ng-template #elseBlock>
                 <p class="result"></p>
