@@ -42,15 +42,16 @@
   height: 40px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 25px;
-
+  font-size: 24px;
+  padding-left: 5px;
   }
 .right-select{
   width: 200px;
   height: 40px;
   border-radius:10px;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 24px;
+  padding-left: 5px;
 }
 input{
   border-radius: 10px ;
@@ -115,6 +116,9 @@ label{
   -webkit-box-shadow: 9px -5px 16px 0px rgba(191, 172, 184, 1);
   -moz-box-shadow:    9px -5px 16px 0px rgba(191, 172, 184, 1);
   box-shadow:         9px -5px 16px 0px rgba(191, 172, 184, 1);
-;
 }
 
+input {
+  /*text-align: center;*/
+  padding-left: 15px;
+}

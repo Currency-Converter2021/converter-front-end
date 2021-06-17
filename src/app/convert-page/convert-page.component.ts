@@ -11,12 +11,11 @@ import { map } from 'rxjs/operators';
 })
 
 export class ConvertPageComponent implements OnInit {
-   currencyQuantity: number = 1;
+   currencyQuantity: number = 0;
    startCurrency: string = 'Select Currency';
    endCurrency: string = 'Select Currency';
    rate: number = 0
    result: number = 0;
-   decimal : number=0;
 
 constructor(private http: HttpClient) {
 
@@ -34,12 +33,14 @@ constructor(private http: HttpClient) {
 
 
   getElements() {
+  if(this.startCurrency!=='Select Currency'&&this.endCurrency!=='Select Currency'){
     this.http.get<any>
     (`http://localhost:8000/currency-exchange-rate/?from=${this.startCurrency}&to=${this.endCurrency}`)
         .subscribe(data => {
           this.rate = data.exchangeRate;
           console.log(this.rate);
         })
+  }
   }
 
   myDataBases = [
@@ -227,7 +228,7 @@ constructor(private http: HttpClient) {
     this.getElements();
   }
 
-  fillQuantity($event: any){ //convert
+  fillQuantity($event: any){
   this.currencyQuantity = $event.target.value;
   }
 }

@@ -3,12 +3,9 @@
     <div class="form-container">
         <h1 class="header">CURRENCY CONVERTER</h1>
         <form>
-            <!--            <h1 class="header">CURRENCY CONVERTER</h1>-->
-
             <div class="line third">
                 <label class="currency-quantity">Amount To Change</label>
                 <input (keyup)="convert($event)" placeholder="...CHANGE..." class="input input-have" type="text">
-                <!--                <input placeholder="Sum" class="input result-need" type="number">-->
             </div>
             <div class="line first">
                 <label class="have">Currency I Have</label>
@@ -22,25 +19,19 @@
                 <label class="need">Currency I Need</label>
                 <select (change)="setValueEnd($event)" class="right-select" name="select-id">
                     <option [value]="data.currency" *ngFor="let data of myDataBases">{{data.currency}}</option>
-                    <!--                                      [value]="onFillData($event)"-->
                 </select>
             </div>
         </form>
         <div class="line zero">
             <p id="result">Your Currency Result is:</p>
-             <div *ngIf="rate!==0; then thenBlock; else elseBlock"></div>
+             <div *ngIf="startCurrency!=='Select Currency'||endCurrency!=='Select Currency'; then thenBlock; else elseBlock"></div>
 
             <ng-template #thenBlock>
-                <p class="result">{{resultMaker()}}{{result | number:'1.5':''}}{{endCurrency !== "Select Currency" ? endCurrency : ""}}</p>
+                <p class="result">{{resultMaker()}}{{result | number:'1.5'}}   {{endCurrency !== "Select Currency" ? endCurrency : ""}}</p>
             </ng-template>
-
             <ng-template #elseBlock>
                 <p class="result"></p>
             </ng-template>
-
-
-
-<!--            <p class="result">{{resultMaker()}}{{result | number:'1.5':''}}{{endCurrency !== "Select Currency" ? endCurrency : ""}}</p>-->
         </div>
     </div>
 </div>

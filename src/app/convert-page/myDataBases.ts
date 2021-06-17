@@ -1,5 +1,5 @@
-
-// const myDataBases = [
+//
+// export var myDataBases = [
 //     {"currency": "EUR"},
 //     {"currency": "AED"},
 //     {"currency": "AFN"},
