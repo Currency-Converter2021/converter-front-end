@@ -209,7 +209,6 @@ export class ConvertPageComponent implements OnInit {
     convert($event: any) {
         // console.log($event.target.value);
         this.currencyQuantity = $event.target.value;
-
         this.checkResult()
     }
 
@@ -225,10 +224,6 @@ export class ConvertPageComponent implements OnInit {
         this.startCurrency = $event.target.value;
         console.log(this.startCurrency);
         this.getElements();
-    }
-
-    fillQuantity($event: any) {
-        this.currencyQuantity = $event.target.value;
     }
 }
 
